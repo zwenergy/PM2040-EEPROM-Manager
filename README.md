@@ -19,6 +19,6 @@ Backing up or restoring the EEPROM takes roughly somewhere between 40 secound an
 The display will show "...done" once the operation completed.
 
 ## Further managing the EEPROMs via USB
-An alternative "EEPROM USB drive" firmware for the PM2040 flash cart is available at the repo here.
+An alternative "EEPROM USB drive" firmware for the PM2040 flash cart is available at the [repo here](https://github.com/zwenergy/PM2040-EEPROM-USB-Drive).
 When flashing this firmware to the PM2040, it will function as a USB drive and display the 3 EEPROM slots from the cart.
 This way, you can easily backup all save files via USB to a computer.
