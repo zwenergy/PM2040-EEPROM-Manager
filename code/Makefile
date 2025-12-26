@@ -1,4 +1,4 @@
-TOOLCHAIN_DIR := ../..
+TOOLCHAIN_DIR := ../../..
 
 TARGET = PM2040_EEPROM
 

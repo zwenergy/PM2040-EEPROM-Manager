@@ -22,6 +22,9 @@
 
 #define EEPROMSLOTS 3
 
+// Manual debounce
+#define DEBOUNCELEN 20
+
 // Addresses.
 // Set EEPROM slot. 0b0100001111000001
 #define REG_SLOT 0x43C1
@@ -390,8 +393,18 @@ void waitForFlash() {
   }
 }
 
-static uint8_t keyScan( void ) {
+uint8_t keyScan( void ) {
+  uint8_t i;
   uint8_t k = KEY_PAD;
+  
+  // Debounce.
+  for ( i = 0; i < DEBOUNCELEN; ++i ) {
+    if ( k == KEY_PAD ) {
+      continue;
+    } else {
+      return -1;
+    }
+  }
   
   return k;
 }
